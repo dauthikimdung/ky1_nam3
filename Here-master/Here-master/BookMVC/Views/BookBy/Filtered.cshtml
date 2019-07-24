@@ -1,0 +1,26 @@
+﻿@model List<BookMVC.Models.BookViewModel>
+
+<div class="products" id="jar">
+     <div class="row same-height-row">
+          @foreach (var b in Model)
+          {
+               Html.RenderAction("Card", "Book", b);
+          }
+     </div>
+</div>
+<div class="pages">
+     @*<p class="loadMore"><a href="#" class="btn btn-primary btn-lg"><i class="fa fa-chevron-down"></i> Load more</a></p>*@
+     <nav>
+          <ul class="pagination justify-content-center pagination-sm"></ul>
+     </nav>
+</div>
+<script>$(document).ready(pageList(6, "#jar ", ".box-product")).ready(limitPerPage("#jar ", ".box-product"));</script>
+<script>
+          $("#jar .row .mt-2").addClass("col-lg-4");
+          $(".bookCate").off('click').on('click', function (e) {
+               e.preventDefault();
+               var id = $(this).data('id');
+               $('.box-product').attr('style', 'display:none!important')
+               $(".box-product.bookCate-" + id).removeAttr('style');
+          })
+</script>
