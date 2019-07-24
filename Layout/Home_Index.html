@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home - Index</title>
+        <link href="css/bootstrap.min.css" ref="stylesheet" />
+        <link href="css/bootstrap.css" rel="stylesheet" />
+        <link href="css/bootstrap-theme.css" rel="stylesheet" />
+        <link href="css/fontawesome.css" rel="stylesheet" />
+        <link href="css/fontawesome.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/all.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon2.jpg" />
+        <link rel="stylesheet" href="Index.css" />
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <!--Header-->
+        <div class="container-fluid bg-white text-dark border-bottom">
+            <div class="row p-3">
+                <!-- Logo -->
+                <div class="col-lg-1"><img class="logo" src="LogoKatsukid.jpg" alt="logo"></div>
+                <!-- Logo End-->
+                <!-- Search box -->
+                <div class="col-lg-1"></div>
+                <div class="col-lg-2 input-group text-dark">
+                    <input id="search" class="form-control" type="text" placeholder="Search"/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </div>
+                <!-- Search Box End -->
+                <!-- Navigator bar -->
+                <nav class="col-lg-5 nav nav-pills nav-justified justify-content-center">
+                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link" href="#">Categories</a>
+                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#">Disabled</a>
+                </nav>
+                <!-- Navigator bar End -->
+                <!-- Account -->
+                <div class="col-lg-3">
+                    <div class="dropdown">
+                        <div class="input-group-btn">
+                            <span>
+                                <button class="btn btn-info dropdown-toggle noarrowdropdown" type="button" id="dropdownAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-user"></i>
+                                </button>
+                                <form class="dropdown-menu p-4">
+                                        <div class="form-group">
+                                          <label for="username">Username or Email address</label>
+                                          <input id="username" type="text" class="form-control" placeholder="Username">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="password">Password</label>
+                                          <input id="password" type="password" class="form-control" placeholder="Password">
+                                        </div>
+                                        <div class="form-check">
+                                          <input type="checkbox" class="form-check-input" id="Remember">
+                                          <label class="form-check-label" for="Remember">
+                                            Remember me
+                                          </label>
+                                        </div>
+                                        <br/>
+                                        <button type="submit" class="btn btn-primary">Sign in</button>
+                                        <span class="m-3">or</span>
+                                        <a><button class="btn btn-primary">Create one</button></a>
+                                    </form>
+                            </span>
+                            <span class="">
+                                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownCart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </button>
+                                <div class="dropdown-menu p-4">
+                                    <span>helo</span>
+                                </div>
+                            </span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Account End -->
+            </div>
+        </div>
+        <!-- Header End-->
+        <div class="section-brand">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-xs-12 ">
+                        <div class="item">
+                            <a href="#">
+                                <img alt="Quality" src="./Img/brand/brand_01.png"/>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <img alt="Creative" src="./Img/brand/brand_02.png"/>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <img alt="Vintage" src="./Img/brand/brand_03.png"/>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <img alt="Cofféhop" src="./Img/brand/brand_04.png"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="footer text-gray">
+            <div class="site-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3 border-right">
+                            <h4 class="textcenter">About</h4>
+                            <p class="fa textjustify"> Established for an big exercise with love for Web by using Bootstrap, Jquery, Popper base on basic knowledges about HTML, CSS and JavaScript</p>
+                            <ul class="list-footer">
+                                <li></li>
+                                <li><i class="fa fa-phone"> 0988.668.868</i></li>
+                                <li><i class="fa fa-envelope-open"> noangel0607@gmail.com</i></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 border-right">
+                            <div class="textcenter"><h4 class="fa">Location</h4></div>
+                            <div class="textcenter">
+                                    <i class="fa fa-map-marker-alt"> 236 Hoàng Quốc Việt, Bắc Từ Liêm, Hà Nội</i>
+                            <div id="map">
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-lg-3 col-md-3">
+                            <div class="footer-widget textcenter">
+                                <span class="foot_title">Gửi email</span>
+                                <br/>
+                                <span class="text_form">Gửi email nhận khuyến mãi</span>
+                                <div class="form_subs">
+                                    
+                                    <form action="//dkt.us13.list-manage.com/subscribe/post?u=0bafe4be7e17843051883e746&amp;id=3bdd6e9e3b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+                                        <button  name="subscribe" id="subscribe"><i class="fa fa-paper-plane"></i></button>
+                                        <input type="email" value="" placeholder="Email của bạn" name="EMAIL" id="mail" aria-label="" >
+                                    </form>
+                                </div>
+                                
+                                <ul class="follow_option">
+                                    <li class="text"><b>Kết nối: </b></li>
+                                    <li>
+                                        <a class="goplus" href="#" title="Theo dõi Google Plus Fresh Food"><i class="fab fa-google-plus-g"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="twitter" href="#" title="Theo dõi Twitter Fresh Food"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="fb" href="#" title="Theo dõi Facebook Fresh Food"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="in" href="#" title="Theo dõi Linkedin Fresh Food"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer End -->
+
+        <!-- Script -->
+        <div>
+        <!-- jQuery library -->
+        <script src="js/jquery-3.2.1.slim.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <!-- Popper -->
+        <script src="js/popper.min.js"></script>
+        <!-- Latest compiled and minified Bootstrap JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Initialize Bootstrap functionality -->
+        <script>
+        // Initialize tooltip component
+        $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        })
+        // Initialize popover component
+        $(function () {
+        $('[data-toggle="popover"]').popover()
+        })
+        
+        /* Initiate Magnify Function
+        with the id of the image, and the strength of the magnifier glass:*/
+        magnify("myimage", 3);
+        </script>
+        <!-- Google API -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+        </div>
+        <!-- Script End -->
+    </body>
+</html>

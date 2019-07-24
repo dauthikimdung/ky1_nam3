@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - Index</title>
+    <link href="css/bootstrap.min.css" ref="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="css/fontawesome.css" rel="stylesheet" />
+    <link href="css/fontawesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon2.jpg" />
+    <link rel="stylesheet" href="Index.css" />
+    
+</head>
+<body>
+    <div class="registerbox">
+    <div class="container">
+        <h4 class="textcenter text-info">Registrator</h4>
+        <form >
+        <div class="form-group">
+        <div class="row pb-1">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="btn btn-info noneradius-right"><i class="fa fa-user icon" aria-hidden="true"></i></span>
+                    <input type="text" onkeyup="check('name')" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+                    
+                </div>
+                <div class="text-danger o-0" id="er_name">* Must enter here</div>
+            </div>
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="btn btn-info noneradius-right"><i class="fa fa-birthday-cake icon" aria-hidden="true"></i></span>
+                    <input type="date" onkeyup="check('birthday')" class="form-control" name="birthday" id="birthday" min="1900-01-01" max="2010-01-01" />
+                </div> 
+                <div class="text-danger o-0" id="er_birthday">* Must fill in this field</div>
+            </div>
+        </div>
+        <div class="row pb-1">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="btn btn-info noneradius-right"><i class="fa fa-envelope icon" aria-hidden="true"></i></span>
+                    <input type="text" onkeyup="check('email')" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+                </div>
+                <div class="text-danger o-0" id="er_email">* Must enter here</div>
+            </div>
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="btn btn-info noneradius-right"><i class="fa fa-home icon" aria-hidden="true"></i></span>
+                    <input type="text" onkeyup="check('address')" class="form-control" name="address" id="address" placeholder="Enter your address"/>
+                </div>
+                <div class="text-danger o-0" id="er_address">* Must enter here</div>
+            </div>
+        </div>
+        <div class="row pb-1">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="btn btn-info noneradius-right"><i class="fa fa-users icon" aria-hidden="true"></i></span>
+                    <input type="text" onkeyup="check('username')" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+                </div>
+                <div class="text-danger o-0" id="er_username">* Must enter here</div>
+            </div>
+            <div class="col-lg-6">
+                 <div class="input-group">
+                    <span class="btn btn-info noneradius-right"><i class="fa fa-phone icon" aria-hidden="true"></i></span>
+                    <input type="tel" onkeyup="check('phone')" class="form-control" name="phone" id="phone"  placeholder="Enter your Phome number"/>
+                </div>
+                <div class="text-danger o-0" id="er_phone">* Must enter here</div>
+            </div>
+        </div>
+        <div class="row pb-1">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="btn btn-info noneradius-right"><i class="fa fa-lock icon" aria-hidden="true"></i></span>
+                    <input type="password" onkeyup="check('password')" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+                </div>
+                <div class="text-danger o-0" id="er_password">* Must enter here</div>
+            </div>
+            <div class="col-lg-6">
+               <select class="custom-select" id="sex">
+                    <option selected value="0">Giới tính</option>
+                    <option value="1">Nam</option>
+                    <option value="2">Nữ</option>
+                    <option value="3">Khác</option>
+                </select>
+                <div class="error" id="er_sex"></div>
+            </div>
+        </div>
+        <div class="row pb-1">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="btn btn-info noneradius-right"><i class="fa fa-lock icon" aria-hidden="true"></i></span>
+                    <input type="password" onkeyup="check('cpassword')" class="form-control" name="cpassword" id="cpassword"  placeholder="Confirm your Password"/>
+                </div>
+                <div class="text-danger o-0" id="er_cpassword">* Must enter here</div>
+            </div>
+            <div class="col-lg-6">
+                
+            </div>
+        </div>
+        <div class="row pb-1">
+            <div class="col-lg-4">
+            </div>
+            <div class="col-lg-6">
+                <button type="submit" class="btn btn-info">Submit</button>
+                <button type="reset" class="btn btn-info">Reset</button>
+                <button type="button" class="btn btn-info"> Cancel</button>
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+        </div>
+        </div>
+    </form>
+</div>
+
+
+    
+    <!-- Script -->
+<div>
+        <!-- Error Register -->
+        <script src="js/validationRegister.js"></script>
+        <!-- jQuery library -->
+        <script src="js/jquery-3.2.1.slim.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <!-- Popper -->
+        <script src="js/popper.min.js"></script>
+        <!-- Latest compiled and minified Bootstrap JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Initialize Bootstrap functionality -->
+        <script>
+        // Initialize tooltip component
+        $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        })
+        // Initialize popover component
+        $(function () {
+        $('[data-toggle="popover"]').popover()
+        })
+        </script>
+        <!-- Zoom in Image-->
+        <script src="js/zoomin.js"></script>
+        <script>
+            /* Initiate Magnify Function
+            with the id of the image, and the strength of the magnifier glass:*/
+        magnify("myimage", 3);
+        </script>
+    
+        <!-- Google API -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+</div>
+        <!-- Script End -->     
+</body>
+</html>
