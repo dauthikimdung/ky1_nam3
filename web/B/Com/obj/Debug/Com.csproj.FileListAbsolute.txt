@@ -1,0 +1,9 @@
+E:\B\Com\bin\Debug\Com.dll
+E:\B\Com\bin\Debug\Com.pdb
+E:\B\Com\obj\Debug\Com.dll
+E:\B\Com\obj\Debug\Com.pdb
+C:\Users\KD2\Desktop\B\Com\bin\Debug\Com.dll
+C:\Users\KD2\Desktop\B\Com\bin\Debug\Com.pdb
+C:\Users\KD2\Desktop\B\Com\obj\Debug\Com.dll
+C:\Users\KD2\Desktop\B\Com\obj\Debug\Com.pdb
+C:\Users\KD2\Desktop\B\Com\obj\Debug\Com.csprojResolveAssemblyReference.cache

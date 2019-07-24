@@ -1,0 +1,100 @@
+﻿@model BookShop.Models.LinhVuc
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Chi tiết lĩnh vực</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+
+
+            <div class="x_content">
+                <br />
+                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"></form>
+                @using (Html.BeginForm("Details", "Category", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
+                                @Html.DisplayNameFor(model => model.MaLinhVuc)
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                
+                                <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" readonly="readonly" value="@Model.MaLinhVuc" style="width:50%">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                                @Html.LabelFor(model => model.TenLinhVuc) :
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" readonly="readonly" value="@Model.TenLinhVuc" style="width:50%">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                                @Html.LabelFor(model => model.NgaySua) :
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" readonly="readonly" value="@Model.NgaySua" style="width:50%">
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <div class="col-md-offset-4 col-md-10">
+
+                                <div class="form-actions no-color">
+                                    <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Edit", "Category",new { id = Model.MaLinhVuc.TrimEnd()})'">Sửa bản ghi</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+@*<h2>Details</h2>
+
+<div>
+    <h4>LinhVuc</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenLinhVuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenLinhVuc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgaySua)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgaySua)
+        </dd>
+
+    </dl>
+</div>*@
+@*<p>
+    @Html.ActionLink("Edit", "Category", new { id = Model.MaLinhVuc }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@

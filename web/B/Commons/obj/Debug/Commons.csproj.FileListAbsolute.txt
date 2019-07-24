@@ -1,0 +1,6 @@
+C:\Users\KD2\Desktop\B\Commons\bin\Debug\Commons.exe.config
+C:\Users\KD2\Desktop\B\Commons\bin\Debug\Commons.exe
+C:\Users\KD2\Desktop\B\Commons\bin\Debug\Commons.pdb
+C:\Users\KD2\Desktop\B\Commons\obj\Debug\Commons.csprojResolveAssemblyReference.cache
+C:\Users\KD2\Desktop\B\Commons\obj\Debug\Commons.exe
+C:\Users\KD2\Desktop\B\Commons\obj\Debug\Commons.pdb

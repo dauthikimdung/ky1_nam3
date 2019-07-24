@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\phuongtuan",
+    "\\phuongtuan\\Areas\\Admin",
+    "\\phuongtuan\\Views",
+    "\\phuongtuan\\Views\\Detail",
+    "\\phuongtuan\\Views\\Shared",
+    "\\phuongtuan\\Views\\User"
+  ],
+  "SelectedNode": "\\phuongtuan\\Views\\User\\Index.cshtml",
+  "PreviewInSolutionExplorer": false
+}

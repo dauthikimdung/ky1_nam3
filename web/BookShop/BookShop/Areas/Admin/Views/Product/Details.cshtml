@@ -1,0 +1,243 @@
+﻿@model BookShop.Models.Product
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="form-horizontal">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Thông tin sản phẩm</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li>
+                            <a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+
+
+                <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"></form>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
+                            @Html.LabelFor(model => model.MaSP) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.MaSP, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.MaSP, "", new { @class = "text-danger" })
+                            @*<input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">*@
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.TenSP) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.TenSP, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.TenSP, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.TacGia) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.TacGia, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.TacGia, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.MaLinhVuc) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-7 col-xs-12">
+                            <select class="form-control" name="MaLinhVuc" style="width:50%" readonly="readonly">
+                                <option>@Model.MaLinhVuc</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.MaNXB) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-7 col-xs-12">
+                            <select class="form-control" name="MaNXB" style="width:50%" readonly="readonly">
+                                <option>@Model.MaNXB</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.SoLuong) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.SoLuong, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.SoLuong, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.GiaGoc) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.GiaGoc, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.GiaGoc, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.GiamGia) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.GiamGia, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.GiamGia, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.Moi) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="radio">
+                                <label>
+                                    @Html.RadioButtonFor(model => model.Moi, "1", new { Checked = "checked", @class = "flat", @disabled = "disabled" }) Mới
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    @Html.RadioButtonFor(model => model.Moi, "0", new { @class = "flat", @disabled = "disabled" }) Cũ
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.AnhBiaSP) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.AnhBiaSP, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%" }, id = "imageProduct" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Chi tiết sản phẩm</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li>
+                            <a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+
+
+                <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"></form>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
+                            @Html.LabelFor(model => model.MaTTCT) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.MaTTCT, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.MaTTCT, "", new { @class = "text-danger" })
+                            @*<input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">*@
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.NgayXuatBan) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <fieldset>
+                                <div class="control-group">
+                                    <div class="controls">
+                                        <div class="col-md-11 xdisplay_inputx form-group has-feedback">
+                                            @Html.EditorFor(model => model.NgayXuatBan, new { htmlAttributes = new { @class = "form-control ", @style = "width:55%", @readonly = "readonly" } })
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.TrongLuong) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.TrongLuong, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.TrongLuong, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.KichThuoc) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.KichThuoc, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.KichThuoc, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.LoaiBia) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-7 col-xs-12">
+                            <select class="form-control" name="LoaiBia" style="width:50%" readonly="readonly">
+                                <option>@Model.LoaiBia</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.SoTrang) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.SoTrang, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.SoTrang, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.MoTaChiTiet) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <textarea id="editor-one" class="editor-wrapper" name="MoTaChiTiet" style="display:normal; width: 50%" readonly="readonly"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-4 col-md-10">
+
+                            <div class="form-actions no-color">
+                                <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Edit", "Product",new { id = Model.MaSP.TrimEnd()})'">Sửa bản ghi</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,229 @@
+﻿@model BookShop.Models.NguoiDung
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Cập nhật lĩnh vực</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+
+
+            <div class="x_content">
+                <br />
+                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"></form>
+                @using (Html.BeginForm("Edit", "User", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.MaKH)
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
+                            @Html.LabelFor(model => model.HoTenKH):
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.HoTenKH, new { htmlAttributes = new { @value = "@Model.MaLinhVuc", @class = "form-control col-md-7 col-xs-12", @style = "width:50%", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.HoTenKH, "", new { @class = "text-danger" })
+                            @*@Html.EditorFor(model => model.MaLinhVuc, new { htmlAttributes = new { @value = "@Model.MaLinhVuc", @class = "form-control col-md-7 col-xs-12", @style = "width:50%", @readonly = "readonly" } })*@
+                            @*<input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" readonly="readonly" value="@Model.MaLinhVuc">*@
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.DiaChi) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.DiaChi, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%" } })
+                            @Html.ValidationMessageFor(model => model.DiaChi, "", new { @class = "text-danger" })
+                            @*@Html.EditorFor(model => model.TenLinhVuc, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%" } })*@
+                            @*@Html.ValidationMessageFor(model => model.TenLinhVuc, "", new { @class = "text-danger" })*@
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.SoDienThoai) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.SoDienThoai, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%" } })
+                            @Html.ValidationMessageFor(model => model.SoDienThoai, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.Email) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%" } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.TenDangNhap) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.TenDangNhap, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%" } })
+                            @Html.ValidationMessageFor(model => model.TenDangNhap, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.MatKhau) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.MatKhau, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%" } })
+                            @Html.ValidationMessageFor(model => model.MatKhau, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.NgaySinh) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <fieldset>
+                                <div class="control-group">
+                                    <div class="controls">
+                                        <div class="col-md-11 xdisplay_inputx form-group has-feedback">
+                                            @Html.EditorFor(model => model.NgaySinh, new { htmlAttributes = new { @class = "form-control has-feedback-left", @id = "single_cal1", @style = "width:55%" } })
+                                            @*@Html.ValidationMessageFor(model => model.TenLinhVuc, "", new { @class = "text-danger" })*@
+                                            @*<input type="text" class="form-control has-feedback-left" id="single_cal1" placeholder="First Name" aria-describedby="inputSuccess2Status">*@
+                                            <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
+                                            <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.GioiTinh) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+
+                            @if (Model.GioiTinh.Contains("nam")|| Model.GioiTinh.Contains("Nam"))
+                            {
+                                <div class="radio">
+                                    <label>
+                                        @Html.RadioButtonFor(model => model.GioiTinh, "Nam", new { Checked = "checked", @class = "flat" }) Nam
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        @Html.RadioButtonFor(model => model.GioiTinh, "Nữ", new { @class = "flat" }) Nữ
+                                    </label>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="radio">
+                                    <label>
+                                        @Html.RadioButtonFor(model => model.GioiTinh, "Nam", new { @class = "flat" }) Nam
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        @Html.RadioButtonFor(model => model.GioiTinh, "Nữ", new { Checked = "checked", @class = "flat" }) Nữ
+                                    </label>
+                                </div>
+                            }
+
+
+                            @*@Html.EditorFor(model => model.GioiTinh, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%" } })
+        @Html.ValidationMessageFor(model => model.GioiTinh, "", new { @class = "text-danger" })*@
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.LoaiTK) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+
+
+                            @if (!Model.TenDangNhap.Contains(Session["Username"].ToString()))
+                            {
+                                if (Model.LoaiTK.ToString().Contains("0"))
+                                {
+                                    <div class="radio">
+                                        <label>
+                                            @Html.RadioButtonFor(model => model.LoaiTK, "0", new { Checked = "checked", @class = "flat" }) Khách hàng
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            @Html.RadioButtonFor(model => model.LoaiTK, "1", new { @class = "flat" }) Quản trị
+                                        </label>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="radio">
+                                        <label>
+                                            @Html.RadioButtonFor(model => model.LoaiTK, "0", new { @class = "flat" }) Khách hàng
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            @Html.RadioButtonFor(model => model.LoaiTK, "1", new { Checked = "checked", @class = "flat" }) Quản trị
+                                        </label>
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                if (Model.LoaiTK.ToString().Contains("0"))
+                                {
+                                    <div class="radio">
+                                        <label>
+                                            @Html.RadioButtonFor(model => model.LoaiTK, "0", new { Checked = "checked", @class = "flat",@disabled= "disabled" }) Khách hàng
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            @Html.RadioButtonFor(model => model.LoaiTK, "1", new { @class = "flat", @disabled = "disabled" }) Quản trị
+                                        </label>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="radio">
+                                        <label>
+                                            @Html.RadioButtonFor(model => model.LoaiTK, "0", new { @class = "flat", @disabled = "disabled" }) Khách hàng
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            @Html.RadioButtonFor(model => model.LoaiTK, "1", new { Checked = "checked", @class = "flat", @disabled = "disabled" }) Quản trị
+                                        </label>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-4 col-md-10">
+                            <input type="submit" value="Cập nhật" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

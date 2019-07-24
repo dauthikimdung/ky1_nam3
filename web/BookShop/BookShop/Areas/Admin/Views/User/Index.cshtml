@@ -1,0 +1,89 @@
+﻿@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@model PagedList.IPagedList<BookShop.Models.NguoiDung>
+<div class="x_panel">
+    <div class="x_title">
+        <h2>Danh sách người dùng </h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li>
+                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            @*<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a href="#">Settings 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Settings 2</a>
+                    </li>
+                </ul>
+            </li>*@
+            <li>
+                <a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Mã khách hàng</th>
+                    <th>Họ tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Địa chỉ</th>
+                    <th>Giới tính</th>
+                    <th>Số điện thoại</th>
+                    
+                    <th>Tác vụ</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    var item = Model.ElementAt(i);
+                    var index = (ViewBag.page) * 10 - (10 - i) + 1;
+                <tr>
+                    <th scope="row">@index</th>
+                    <td>@item.MaKH</td>
+                    <td>@item.HoTenKH</td>
+                    <td>@item.NgaySinh</td>
+                    <td>@item.DiaChi</td>
+                    <td>@item.GioiTinh</td>
+                    <td>@item.SoDienThoai</td>
+
+                    <td>
+                        <li role="presentation" class="dropdown">
+                            <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="true">
+                                Chọn tác vụ
+                                <span class="caret"></span>
+                            </a>
+                            <ul id="menu3" class="dropdown-menu animated fadeInDown" role="menu" aria-labelledby="drop6">
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="@Url.Action("Details", "User", new { id = item.MaKH.TrimEnd()})">Chi tiết</a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="@Url.Action("Edit", "User", new { id = item.MaKH.TrimEnd()})">Sửa</a>
+                                </li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="@Url.Action("Delete", "User", new { id = item.MaKH.TrimEnd()})">Xóa</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+        <div>
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+        </div>
+    </div>
+</div>

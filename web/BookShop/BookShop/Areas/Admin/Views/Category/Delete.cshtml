@@ -1,0 +1,140 @@
+﻿@model BookShop.Models.LinhVuc
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Chi tiết lĩnh vực</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+
+
+            <div class="x_content">
+                <br />
+                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"></form>
+
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
+                            @Html.LabelFor(model => model.MaLinhVuc) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+
+                            <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" readonly="readonly" value="@Model.MaLinhVuc" style="width:50%">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.TenLinhVuc) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" readonly="readonly" value="@Model.TenLinhVuc" style="width:50%">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.NgaySua) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" readonly="readonly" value="@Model.NgaySua" style="width:50%">
+                        </div>
+                    </div>
+                    
+                        <br />
+                        <div class="col-md-offset-4 col-md-10">
+                            <button type="button"  class="btn btn-danger" data-toggle="modal" data-target="#deleteModel" >Xóa bản ghi</button>
+                        </div>
+                        <div class="modal fade" id="deleteModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Xác nhận xóa</h4>
+                                    </div>
+                                    @if (ViewBag.EntityChild.Count==0)
+                                    {
+                                        using (Html.BeginForm("Delete", "Category", new { id = Model.MaLinhVuc.TrimEnd(), check = 1 }, FormMethod.Post))
+                                        {
+                                            @Html.AntiForgeryToken()
+                                            <div class="modal-body">
+                                                Bạn chắc chắn muốn xóa: <span><b>@Model.TenLinhVuc</b></span>?
+                                            </div>
+                                            <div class="modal-footer">
+
+                                                <input type="submit" class="btn btn-danger" value="Chấp nhận"/>
+                                            </div>
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        using (Html.BeginForm("Delete", "Category", new { id = Model.MaLinhVuc.TrimEnd(), check = 2 }, FormMethod.Post))
+                                        {
+                                            @Html.AntiForgeryToken()
+                                            <div class="modal-body">
+                                                Xóa tất cả các bản ghi thuộc lĩnh vực: <span><b>@Model.TenLinhVuc</b></span>?
+                                            </div>
+                                            <div class="modal-footer">
+
+                                                <input type="submit" class="btn btn-danger" />
+                                            </div>
+                                        }
+
+                                    }
+
+
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>LinhVuc</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenLinhVuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenLinhVuc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgaySua)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgaySua)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>*@

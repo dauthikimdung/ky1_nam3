@@ -1,0 +1,96 @@
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\B\Model\bin\Debug\Model.dll.config
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\B\Model\bin\Debug\Model.dll
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\B\Model\bin\Debug\Model.pdb
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\B\Model\bin\Debug\EntityFramework.dll
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\B\Model\bin\Debug\EntityFramework.SqlServer.dll
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\B\Model\bin\Debug\EntityFramework.xml
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\B\Model\bin\Debug\EntityFramework.SqlServer.xml
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\B\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\B\Model\obj\Debug\Model.dll
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\B\Model\obj\Debug\Model.pdb
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\TEMPLATE-SELECTED\B2\B\Model\bin\Debug\Model.dll.config
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\TEMPLATE-SELECTED\B2\B\Model\bin\Debug\Model.dll
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\TEMPLATE-SELECTED\B2\B\Model\bin\Debug\Model.pdb
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\TEMPLATE-SELECTED\B2\B\Model\bin\Debug\EntityFramework.dll
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\TEMPLATE-SELECTED\B2\B\Model\bin\Debug\EntityFramework.SqlServer.dll
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\TEMPLATE-SELECTED\B2\B\Model\bin\Debug\EntityFramework.xml
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\TEMPLATE-SELECTED\B2\B\Model\bin\Debug\EntityFramework.SqlServer.xml
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\TEMPLATE-SELECTED\B2\B\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\TEMPLATE-SELECTED\B2\B\Model\obj\Debug\Model.dll
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\TEMPLATE-SELECTED\B2\B\Model\obj\Debug\Model.pdb
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\TEMPLATE-SELECTED\B2\B\Model\bin\Debug\PagedList.dll
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\TEMPLATE-SELECTED\B2\B\Model\bin\Debug\PagedList.Mvc.dll
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\TEMPLATE-SELECTED\B2\B\Model\bin\Debug\PagedList.xml
+H:\HOCTAP\ky1_nam4\Ky 1\cong nghe web\TEMPLATE-SELECTED\B2\B\Model\bin\Debug\PagedList.Mvc.xml
+E:\ASP\B\Model\bin\Debug\Model.dll.config
+E:\ASP\B\Model\bin\Debug\Model.dll
+E:\ASP\B\Model\bin\Debug\Model.pdb
+E:\ASP\B\Model\bin\Debug\EntityFramework.dll
+E:\ASP\B\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\ASP\B\Model\bin\Debug\PagedList.dll
+E:\ASP\B\Model\bin\Debug\PagedList.Mvc.dll
+E:\ASP\B\Model\bin\Debug\EntityFramework.xml
+E:\ASP\B\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\ASP\B\Model\bin\Debug\PagedList.xml
+E:\ASP\B\Model\bin\Debug\PagedList.Mvc.xml
+E:\ASP\B\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\ASP\B\Model\obj\Debug\Model.dll
+E:\ASP\B\Model\obj\Debug\Model.pdb
+E:\B\Model\bin\Debug\Model.dll.config
+E:\B\Model\bin\Debug\Model.dll
+E:\B\Model\bin\Debug\Model.pdb
+E:\B\Model\bin\Debug\Com.dll
+E:\B\Model\bin\Debug\EntityFramework.dll
+E:\B\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\B\Model\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\B\Model\bin\Debug\PagedList.dll
+E:\B\Model\bin\Debug\PagedList.Mvc.dll
+E:\B\Model\bin\Debug\System.Web.Helpers.dll
+E:\B\Model\bin\Debug\System.Web.Mvc.dll
+E:\B\Model\bin\Debug\System.Web.Razor.dll
+E:\B\Model\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\B\Model\bin\Debug\System.Web.WebPages.dll
+E:\B\Model\bin\Debug\System.Web.WebPages.Razor.dll
+E:\B\Model\bin\Debug\Com.pdb
+E:\B\Model\bin\Debug\EntityFramework.xml
+E:\B\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\B\Model\bin\Debug\PagedList.xml
+E:\B\Model\bin\Debug\PagedList.Mvc.xml
+E:\B\Model\bin\Debug\System.Web.Helpers.xml
+E:\B\Model\bin\Debug\System.Web.Mvc.xml
+E:\B\Model\bin\Debug\System.Web.Razor.xml
+E:\B\Model\bin\Debug\System.Web.WebPages.xml
+E:\B\Model\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\B\Model\bin\Debug\System.Web.WebPages.Razor.xml
+E:\B\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\B\Model\obj\Debug\Model.dll
+E:\B\Model\obj\Debug\Model.pdb
+C:\Users\KD2\Desktop\B\Model\bin\Debug\Model.dll.config
+C:\Users\KD2\Desktop\B\Model\bin\Debug\Model.dll
+C:\Users\KD2\Desktop\B\Model\bin\Debug\Model.pdb
+C:\Users\KD2\Desktop\B\Model\bin\Debug\Com.dll
+C:\Users\KD2\Desktop\B\Model\bin\Debug\EntityFramework.dll
+C:\Users\KD2\Desktop\B\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\KD2\Desktop\B\Model\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\KD2\Desktop\B\Model\bin\Debug\PagedList.dll
+C:\Users\KD2\Desktop\B\Model\bin\Debug\PagedList.Mvc.dll
+C:\Users\KD2\Desktop\B\Model\bin\Debug\System.Web.Helpers.dll
+C:\Users\KD2\Desktop\B\Model\bin\Debug\System.Web.Mvc.dll
+C:\Users\KD2\Desktop\B\Model\bin\Debug\System.Web.Razor.dll
+C:\Users\KD2\Desktop\B\Model\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\KD2\Desktop\B\Model\bin\Debug\System.Web.WebPages.dll
+C:\Users\KD2\Desktop\B\Model\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\KD2\Desktop\B\Model\bin\Debug\Com.pdb
+C:\Users\KD2\Desktop\B\Model\bin\Debug\EntityFramework.xml
+C:\Users\KD2\Desktop\B\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\KD2\Desktop\B\Model\bin\Debug\PagedList.xml
+C:\Users\KD2\Desktop\B\Model\bin\Debug\PagedList.Mvc.xml
+C:\Users\KD2\Desktop\B\Model\bin\Debug\System.Web.Helpers.xml
+C:\Users\KD2\Desktop\B\Model\bin\Debug\System.Web.Mvc.xml
+C:\Users\KD2\Desktop\B\Model\bin\Debug\System.Web.Razor.xml
+C:\Users\KD2\Desktop\B\Model\bin\Debug\System.Web.WebPages.xml
+C:\Users\KD2\Desktop\B\Model\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\KD2\Desktop\B\Model\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\KD2\Desktop\B\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\KD2\Desktop\B\Model\obj\Debug\Model.dll
+C:\Users\KD2\Desktop\B\Model\obj\Debug\Model.pdb

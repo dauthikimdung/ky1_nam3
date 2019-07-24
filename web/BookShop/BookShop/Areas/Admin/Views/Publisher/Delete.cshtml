@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@model BookShop.Models.NhaXuatBan
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Chi tiết lĩnh vực</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+
+
+            <div class="x_content">
+                <br />
+                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"></form>
+
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
+                            @Html.LabelFor(model => model.MaNXB) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.MaNXB, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.MaNXB, "", new { @class = "text-danger" })
+                            @*<input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">*@
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.TenNXB) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.TenNXB, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.TenNXB, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.DiaChi) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.DiaChi, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.DiaChi, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                            @Html.LabelFor(model => model.SoDienThoai) :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            @Html.EditorFor(model => model.SoDienThoai, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12", @style = "width:50%", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.SoDienThoai, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col-md-offset-4 col-md-10">
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModel">Xóa bản ghi</button>
+                    </div>
+                    <div class="modal fade" id="deleteModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Xác nhận xóa</h4>
+                                </div>
+                                @if (ViewBag.EntityChild.Count==0)
+                                {
+                                    using (Html.BeginForm("Delete", "Publisher", new { id = Model.MaNXB.TrimEnd(), check = 1 }, FormMethod.Post))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        <div class="modal-body">
+                                            Bạn chắc chắn muốn xóa: <span><b>@Model.TenNXB</b></span>?
+                                        </div>
+                                        <div class="modal-footer">
+
+                                            <input type="submit" class="btn btn-danger" value="Chấp nhận"/>
+                                        </div>
+                                    }
+
+                                }
+                                else
+                                {
+                                    using (Html.BeginForm("Delete", "Publisher", new { id = Model.MaNXB.TrimEnd(), check = 2 }, FormMethod.Post))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        <div class="modal-body">
+                                            Xóa tất cả các bản ghi của nhà xuất bản: <span><b>@Model.TenNXB</b></span>?
+                                        </div>
+                                        <div class="modal-footer">
+
+                                            <input type="submit" class="btn btn-danger" value="Xóa"/>
+                                        </div>
+                                    }
+
+                                }
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,12 @@
+D:\Source_Code\Web\BookShop\Models\bin\Debug\Models.dll.config
+D:\Source_Code\Web\BookShop\Models\bin\Debug\Models.dll
+D:\Source_Code\Web\BookShop\Models\bin\Debug\Models.pdb
+D:\Source_Code\Web\BookShop\Models\bin\Debug\EntityFramework.dll
+D:\Source_Code\Web\BookShop\Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\Source_Code\Web\BookShop\Models\bin\Debug\EntityFramework.xml
+D:\Source_Code\Web\BookShop\Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\Source_Code\Web\BookShop\Models\obj\Debug\Models.csprojAssemblyReference.cache
+D:\Source_Code\Web\BookShop\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+D:\Source_Code\Web\BookShop\Models\obj\Debug\Models.csproj.CopyComplete
+D:\Source_Code\Web\BookShop\Models\obj\Debug\Models.dll
+D:\Source_Code\Web\BookShop\Models\obj\Debug\Models.pdb

@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@using PagedList.Mvc;
+@model PagedList.IPagedList<BookShop.Models.Order>
+<div class="x_panel">
+    <div class="x_title">
+        <h2>Danh sách dơn hàng </h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li>
+                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li>
+                <a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Mã đơn hàng</th>
+                    <th>Tên đơn hàng</th>
+                    <th>Tình trạng giao hàng</th>
+                    <th>Tình trạng thanh toán</th>
+                    <th>Tổng tiền</th>
+                    <th>Tác vụ</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    var item = Model.ElementAt(i);
+                    var index = (ViewBag.page) * 10 - (10 - i) + 1;
+                <tr>
+                    <th scope="row">@index</th>
+                    <td>@item.MaDH</td>
+                    <td>@item.TenDH</td>
+                    @if (item.TinhTrangGH.ToString().Contains("0"))
+                    {
+                        <td>Đang giao</td>
+                    }
+                    else
+                    {
+                        <td>Đã giao</td>
+                    }
+                    @if (item.TinhTrangTT.ToString().Contains("0"))
+                    {
+                        <td>Chưa thanh toán</td>
+                    }
+                    else
+                    {
+                        <td>Đã thanh toán</td>
+                    }
+                    <td>@item.TongTien</td>
+                    <td>
+                        <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Details", "Order",new { id = item.MaDH.TrimEnd()})'" >Chi tiết</button>
+                        <br />
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#row_@item.MaDH.TrimEnd()">Xóa đơn</button>
+                        <div class="modal fade" id="row_@item.MaDH.TrimEnd()" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="row_@item.MaDH">Xác nhận xóa</h4>
+                                    </div>
+                                    @using (Html.BeginForm("Delete", "Order", new { id = item.MaDH.TrimEnd() }, FormMethod.Post))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        <div class="modal-body">
+                                            Bạn chắc chắn muốn xóa: <span><b>@item.TenDH</b></span>?
+                                        </div>
+                                        <div class="modal-footer">
+
+                                            <input type="submit" value="Xóa" class="btn btn-danger" />
+                                        </div>
+                                    }
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+        <div>
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+        </div>
+    </div>
+</div>

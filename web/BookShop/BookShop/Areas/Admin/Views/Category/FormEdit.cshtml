@@ -1,0 +1,123 @@
+﻿
+@{
+     ViewBag.Title = "FormEdit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@model PagedList.IPagedList<BookShop.Models.LinhVuc>
+@using PagedList.Mvc;
+<div class="x_panel">
+    <div class="x_title">
+        <h2>Sửa lĩnh vực! </h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li>
+                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li>
+                <a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>  <small>Chọn lĩnh vực muốn sửa</small></h3>
+            </div>
+            <div class="title_right">
+                <div style="float:right;margin-top:15px">
+                    <li role="presentation" class="dropdown">
+                        <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="true">
+                            Tìm kiếm theo
+                            <span class="caret"></span>
+                        </a>
+                        <ul id="menu3" class="dropdown-menu animated fadeInDown" role="menu" aria-labelledby="drop6" style="text-align:center">
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="1" href="@Url.Action("FormEdit", "Category", new { choose = 1,searchString=@ViewBag.Search})">Mã lĩnh vực</a>
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="2" href="@Url.Action("FormEdit", "Category", new { choose = 2,searchString=@ViewBag.Search })">Tên lĩnh vực</a>
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search" style="float:right">
+                    @using (Html.BeginForm("FormEdit", "Category", FormMethod.Get))
+                    {
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Tìm kiếm..." style="background-color:rgba(200, 200, 200, 0.93)" value="@ViewBag.Search" name="searchString">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit">Tìm!</button>
+                            </span>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="x_panel">
+    <div class="x_title">
+        <h2>Danh sách tìm kiếm </h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li>
+                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li>
+                <a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Mã lĩnh vực</th>
+                    <th>Tên lĩnh vực</th>
+                    <th>Ngày chỉnh sửa</th>
+                    <th>Tác vụ</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    var item = Model.ElementAt(i);
+                    var index = (ViewBag.page) * 10 - (10 - i) + 1;
+                    <tr>
+                        <th scope="row">@index</th>
+                        <td>@item.MaLinhVuc</td>
+                        <td>@item.TenLinhVuc</td>
+                        <td>@item.NgaySua</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Edit", "Category", new { id = item.MaLinhVuc.TrimEnd() })'">Sửa</button>
+                            @*<a href="@Url.Action("Edit", "Category", new { id = item.MaLinhVuc.TrimEnd() })">Sửa</a>*@
+                        </td>
+                    </tr>
+                    }
+            </tbody>
+        </table>
+        <div>
+            @Html.PagedListPager(Model, page => Url.Action("FormEdit", new { page, @searchString=@ViewBag.Search,@choose=ViewBag.choose}))
+        </div>
+    </div>
+</div>
+@*<div class="x_panel">
+    <div class="x_title">
+        <h2>Thông tin </h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li>
+                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li>
+                <a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+
+    </div>
+</div>*@

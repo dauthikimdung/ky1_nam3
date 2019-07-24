@@ -1,0 +1,115 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@using PagedList.Mvc;
+@model PagedList.IPagedList<BookShop.Models.NhaXuatBan>
+<div class="x_panel">
+    <div class="x_title">
+        <h2>Danh sách nhà xuất bản </h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li>
+                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li>
+                <a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Mã nhà xuất bản</th>
+                    <th>Tên nhà xuất bản</th>
+                    <th>Địa chỉ</th>
+                    <th>Số điện thoại</th>
+                    <th> Tác vụ</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    var item = Model.ElementAt(i);
+                    var index = (ViewBag.page) * 10 - (10 - i) + 1;
+                <tr>
+                    <th scope="row">@index</th>
+                    <td>@item.MaNXB</td>
+                    <td>@item.TenNXB</td>
+                    <td>@item.DiaChi</td>
+                    <td>@item.SoDienThoai</td>
+                    <td>
+                        <li role="presentation" class="dropdown">
+                            <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="true">
+                                Chọn tác vụ
+                                <span class="caret"></span>
+                            </a>
+                            <ul id="menu3" class="dropdown-menu animated fadeInDown" role="menu" aria-labelledby="drop6">
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="@Url.Action("Details", "Publisher", new { id = item.MaNXB.TrimEnd()})">Chi tiết</a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="@Url.Action("Edit", "Publisher", new { id = item.MaNXB.TrimEnd()})">Sửa</a>
+                                </li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation">
+                                    <a role="menuitem" tabindex="-1" href="@Url.Action("Delete", "Publisher", new { id = item.MaNXB.TrimEnd()})">Xóa</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+        <div>
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+        </div>
+    </div>
+</div>
+
+
+@*<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenNXB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoDienThoai)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenNXB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiaChi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoDienThoai)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaNXB }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MaNXB }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MaNXB })
+            </td>
+        </tr>
+    }
+
+</table>*@
