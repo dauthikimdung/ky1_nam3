@@ -1,0 +1,13 @@
+Có các dịch vụ Web server, Mail server
+Tại sao cần, giá tiền
+Fire wall
+Layer 3 và Layer 2 có khác nhau không
+thiết kế fire wall 
+Để mảy chủ ở tầng cao
+Số lượng người cần để làm việc trong hệ thống (vận hành hệ thống)
+Quá trình truyền giao
+
+Vòng đời hệ thống
+
+Danh sách thiết bị sử dụng, giá tiền
+mô hình antivirus cài ở đâu, chạy như nào
